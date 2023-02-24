@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--id= javaScript, class para css y name para otro lenguaje distinto-->
+    <form action="">
+        <label for="">Numero 1:</label>
+        <input type="text" placeholder="Ingrese el numero 1 "name="" id="num1"><br><br>
+        <label for="">Numero 2:</label>
+        <input type="text" name="" id="num2" placeholder="Ingrese el numero 2">
+        <input type="button" value="Calcular la suma de los numeros" onclick="calcular()">
+        <p id="resultado"></p>
+    </form>
+    <script>
+        function calcular(){
+            //datos de entrada¿que datos necesitamos para ese calculo?
+            let numero1 = parseInt(document.getElementById('num1').value);
+            //value es para tomar el valor de lo ingresado en id 1
+            //id en css es #
+            //id en js : document.getElementById('')
+            let numero2 = parseInt(document.getElementById('num2').value);
+            //procesos 
+            let suma= numero1 + numero2;
+            //salida 
+            document.getElementById('resultado').innerHTML="El resultado de la suma es : " + suma;
+        }
+    </script>
+</body>
+</html>

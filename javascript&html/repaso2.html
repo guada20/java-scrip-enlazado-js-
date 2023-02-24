@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="">
+    <label for="">Numero 1</label>
+    <input type="text" name="" id="numero1">
+    <select name="" id="operaciones">
+        <option value="suma">suma</option>
+        <option value="resta">Resta</option>
+        <option value="multiplicacion">Multiplicación</option>
+        <option value="division">División</option>
+    </select>
+    <label for="">Numero 2</label>
+    <input type="text" name="" id="numero2">
+    <input type="button" value="calcular" onclick="calcular()">
+    <p id="solucion"></p>
+</form>
+    
+    <script>
+        function calcular(){
+         let numero1=parseInt(document.getElementById('numero1').value);
+         let numero2=parseInt(document.getElementById('numero2').value);
+         let operaciones=(document.getElementById('operaciones').value);
+         let solucion;
+         if(operaciones=="suma"){
+            document.getElementById('solucion').innerHTML="El resultado de la suma es : " + (numero1+numero2);
+         }else if(operaciones=="resta"){
+            document.getElementById('solucion').innerHTML="El resultado de la resta es : " + (numero1-numero2);
+         }else if(operaciones=="multiplicacion"){
+            document.getElementById('solucion').innerHTML="El resultado de la multiplicacion es : " + (numero1*numero2);
+         }else{
+            document.getElementById('solucion').innerHTML="El resultado de la division es : " + (numero1/numero2);
+         }
+        }
+       
+    </script>
+</body>
+</html>

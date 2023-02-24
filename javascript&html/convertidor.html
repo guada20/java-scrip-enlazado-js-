@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        
+        <input type="text" name="" id="pesos">
+        <select name="" id="opcion">
+            <option value="euros">Euros</option>
+            <option value="pesosc">COP</option>
+        </select>
+        <input type="button" value="calcular" onclick="calcular()">
+        <input type="Reset" value="Borrar todo">
+        <p id="resultado"></p>
+    </form>
+    <script>
+        function calcular(){
+         let euros=parseInt(document.getElementById('pesos').value);
+         let opcion=(document.getElementById('opcion').value);
+         let resultado;
+         if(opcion=="euros"){
+            let resultadoe=euros*5.111;
+            document.getElementById('resultado').innerHTML= +euros + " Euros son  : " + resultadoe + " pesos colombianos";
+         }else{
+            let resultadoc=euros/0.000195617;
+            document.getElementById('resultado').innerHTML= +euros + " Pesos colombianos son  : " + resultadoc + " Euros";
+         }
+         
+        }
+       
+    </script>
+</body>
+</html>
